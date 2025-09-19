@@ -6,6 +6,33 @@
     <title>Document</title>
 </head>
 <body>
+    <h1> Main Tile </h1>
+    <h2> Sub Tile </h2>
+    <h3> Sub Tile </h3>
+
+    <p>본문입니다.</p>
+
+    <div> 기본 태그입니다. </div>
+    <P></P>
+    <div>이름, 전화번호를 순서대로 기입해주세요.</div>
+
+    <input id="input-test1" />
+    <input id="input-test2">
+
+    <button id="btn-Test">
+        Test
+    </button>
+
+    <script>
+        var inputTest1 = document.getElementById("input-test1")
+        var inputTest2 = document.getElementById("input-test2")
+
+        var btnTest = document.getElementById("btn-Test")
+        btnTest.addEventListener('click',() =>  {
+
+            console.log('hello '+inputTest1.value + ' ' + inputTest2.value)
+})
+    </script>
     
 </body>
 </html>
