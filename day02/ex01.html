@@ -8,6 +8,17 @@
 <body>
     <h1 id="output-name"> your name : </h1>
     <input id="inp-name">
+    <button id="btn-submit">submit</button>
     
+    <script>
+
+    var outputName = document.getElementById("output-name")
+    var inpName = document.getElementById("inp-name")
+    var btnSubmit = document.getElementById("btn-submit")
+
+    btnSubmit.addEventListener('click', () => {outputName.innerText = "your name : "+inpName.value})
+
+    </script>
+
 </body>
 </html>
