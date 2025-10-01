@@ -8,16 +8,35 @@
 <body>
     <h1 id="count-text"> count : 0 </h1>
     <button id="btn-inc"> Inc(+) </button>
+    <button id="btn-dec"> Inc(-) </button>
+    <button id="btn-reset"> Reset(0) </button>
 
     <script>
         var CountText = document.getElementById("count-text")
         var BtnInc = document.getElementById("btn-inc")
+        var BtnDec = document.getElementById("btn-dec")
+        var BtnReset = document.getElementById("btn-reset")
+
         var count = 0;
 
         BtnInc.addEventListener("click", () => {
             count = count+1;
             console.log(count)
             CountText.innerText("count : "+ count)
+        })
+
+        BtnDec.addEventListener("click", () => {
+            count = count-1;
+            console.lon(count)
+            CountText.innerText("count : "+count)
+        })
+
+        BtnReset.addEventListener("click", () => {
+            count = 0;
+            console.log(count)
+            BtnReset.addEventListener("click", () => {
+                BtnReset.innerText("count : "+count)
+            })
         })
     </script>
 </body>
