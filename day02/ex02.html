@@ -22,20 +22,20 @@
         BtnInc.addEventListener("click", () => {
             count = count+1;
             console.log(count)
-            CountText.innerText("count : "+ count)
+            CountText.innerText = "count : "+ count
         })
 
         BtnDec.addEventListener("click", () => {
             count = count-1;
             console.log(count)
-            CountText.innerText("count : "+count)
+            CountText.innerText="count : "+count
         })
 
         BtnReset.addEventListener("click", () => {
             count = 0;
             console.log(count)
             BtnReset.addEventListener("click", () => {
-                BtnReset.innerText("count : "+count)
+                BtnReset.innerText="count : "+count
             })
         })
     </script>
