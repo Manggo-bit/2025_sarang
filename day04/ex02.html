@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkbox examlple</title>
 </head>
+
 <body>
     <h1>체크박스</h1>
+
     <div>
     <input type="checkbox" id="check-agree"/> <label for="check-agree">동의</label> <!--for은 딱히 의미 없음-->
     </div>
 
     <p> 결과 : <span id="txt-result"></span></p>
     <button id="btn-submit"> 제출 </button>
+
+    <div>
+        <input type="checkbox" name="grp-1"/> <labe>사과</labe> <!--체크박스는 기본적으로 다중 체크로 되어 있기 때문에-->
+        <input type="checkbox" name="grp-1"/> <labe>바나나</labe> <!-- 그룹으로 묶어도 되지 않는다(그룹화x)-->
+    </div>
 
     <script>
         var BtnSubmit = document.getElementById("btn-submit")
