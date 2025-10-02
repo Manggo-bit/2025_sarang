@@ -24,9 +24,9 @@
 
         var BtnSubmit = document.getElementById("btn-submit")
 
-        BtnSubmit.addEventListener("click", () => {
-            var Num1 = Number(InpNum1.value);
-            var Num2 = Number(InpNum2.value);
+        BtnSubmit.addEventListener('click', () => {
+            var Num1 = Number(InpNum1.value) || 0;
+            var Num2 = Number(InpNum2.value) || 0;
             var Result = Num1 + Num2;
 
             InpResult.value = Result;
