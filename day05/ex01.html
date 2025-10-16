@@ -6,11 +6,12 @@
     <title> ex01 </title>
 </head>
 <body>
-    
+
     <input type="range" min="0" max="100" value="50" id="inp-volume"/>
     <p id="volumeTxt">볼륨 : 0%</p>
 
     <script>
+
         const inpVolume = document.getElementById("inp-volume") //참조만 할 경우 이 친구를 쓴다!
         const volumeTxt = document.getElementById("volumeTxt") //이름을 같게 쓰는 경우도 있음
 
@@ -23,6 +24,7 @@
             console.log('changed : '+inpVolume.value)
             volumeTxt.innerText = `volue : ${inpVolume.value} % OK` //값의 변화가 멈추면 보여줌
         })
+        
     </script>
 
 </body>
