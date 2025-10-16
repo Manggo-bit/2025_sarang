@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ex01 </title>
+</head>
+<body>
+    <input type="range" min="0" max="100" value="50" id="inp-volume"/>
+    <p id="volumeTxt">볼륨 : 0%</p>
+
+    <script>
+        const inpVolume = document.getElementById("inp-volume") //참조만 할 경우 이 친구를 쓴다!
+        const volumeTxt = document.getElementById("volumeTxt") //이름을 같게 쓰는 경우도 있음
+
+        inpVolume.addEventListener('input' , () => { //input은 값이 변하면 즉시 호출 방식
+            console.log("input : "+inpVolume.value)
+            volumeTxt.innerText = `volue : ${inpVolume.value}` //+는 너무 직관적이라 이런 식으로 동적 만들어주기도 함
+        })
+
+        inpVolume.addEventListener('change' , () => {
+            console.log('changed : '+inpVolume.value)
+            volumeTxt.innerText = `volue : ${inpVolume.value} % OK` //값의 변화가 멈추면 보여줌
+        })
+    </script>
+</body>
+</html>
