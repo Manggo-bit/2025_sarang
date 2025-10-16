@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="date" id="inpDate"/>
+    </div>
+
+    <script>
+        const inpDate = document.getElementById("inpDate")
+        
+        inpDate.addEventListener('change',(evt) => {  //인풋데이터에서 넘어온 이벤트 인자, evt를 추가
+            console.log(evt.target.value) //이렇게 될 경우 타겟이 인풋데이터가 됨. 조금 더 범용적인 코드가 됨
+        })
+    </script>
+</body>
+</html>
