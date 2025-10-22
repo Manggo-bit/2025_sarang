@@ -8,6 +8,32 @@
 <body>
     카운터 문제
     <hr>
-    <
+    <h1 id="count-text"> count : 0 </h1>
+    <button id="btn-plus">Inc(+)</button> <button id="btn-minus">Inc(-)</button> <button id="btn-reset">Reset(0)</button>
+    
+    <script>
+        var CountText = document.getElementById("count-text")
+        var BtnPlus = document.getElementById("btn-plus")
+        var BtnMinus = document.getElementById("btn-minus")
+        var BtnReset = document.getElementById("btn-reset")
+
+        var count = 0;
+
+        BtnPlus.addEventListener('click', () => {
+            count += 1;
+            CountText.innerText = "count : "+count;
+        })
+
+        BtnMinus.addEventListener('click', () => {
+            count -= 1;
+            CountText.innerText = "count : "+count;
+        })
+
+        BtnReset.addEventListener('click', () => {
+            count = 0;
+            CountText.innerText = "count : "+count;
+        })
+
+    </script>
 </body>
 </html>
