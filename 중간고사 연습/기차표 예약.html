@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기차표 예약</title>
+</head>
+<body>
+    <h1>기차표 예약</h1>
+    <hr>
+    <h2>출발역</h2>
+    <div id="one-city">
+        <input type="radio" name="grp-1" value="서울"> <label>서울</label>
+        <input type="radio" name="grp-1" value="천안"> <label>천안</label>
+        <input type="radio" name="grp-1" value="세종"> <label>세종</label>
+        <input type="radio" name="grp-1" value="익산"> <label>익산</label>
+    </div>
+
+    <h2>도착역</h2>
+    <div id="two-city">
+        <input type="radio" name="grp-2" value="광주"> <label>광주</label>
+        <input type="radio" name="grp-2" value="목포"> <label>목포</label>
+        <input type="radio" name="grp-2" value="정읍"> <label>정읍</label>
+        <input type="radio" name="grp-2" value="공주"> <label>공주</label>
+    </div>
+    <br>
+
+    <button id="btn-submit">선택</button><br>
+    <p id="txt-result"></p>
+
+    <script>
+    var BtnSubmit = document.getElementById("btn-submit")
+    var TxtResult = document.getElementById("txt-result")
+
+    BtnSubmit.addEventListener('click', () => {
+        var OneCity = document.querySelector("input[name='grp-1']:checked")
+        var TwoCity = document.querySelector("input[name='grp-2']:checked")
+
+        TxtResult.innerText = "출발역 : "+OneCity.value+" / 도착역 : "+TwoCity.value
+    })
+    </script>
+</body>
+</html>
