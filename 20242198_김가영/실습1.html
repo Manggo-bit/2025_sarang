@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중간실습1</title>
+
+    <style>
+        body {
+            background-color:blanchedalmond;
+            color: rgb(255, 53, 235);
+            font-style: normal;
+            ;
+        }
+        
+        h1 {
+            width: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-weight: 1000;
+        }
+
+        hr {
+            border-color: rgb(255, 53, 235);
+        }
+
+        #count-text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-weight: 500;
+            
+        }
+
+        button {
+            font-style: italic;
+            background-color:yellow;
+            border-color: yellow;
+            color: rgb(255, 53, 235);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> 카운터 </h1>
+    <hr>
+    <h2 id="count-text"> Count : 0 </h2>
+    <button id="btn-plus"> 증가(+1) </button>
+    <button id="btn-reset"> 초기화(0) </button>
+    
+    <script>
+
+        var CountText = document.getElementById("count-text")
+        var BtnPlus = document.getElementById("btn-plus")
+        var BtnReset = document.getElementById("btn-reset")
+
+        var count = 0;
+
+        BtnPlus.addEventListener("click", () => {
+            count = count+1;
+            CountText.innerText = "count : "+ count
+        })
+
+        BtnReset.addEventListener("click", () => {
+            count = 0;
+            CountText.innerText="count : "+count
+        })
+
+    </script>
+</body>
+</html>
