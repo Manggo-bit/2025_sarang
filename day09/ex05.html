@@ -27,6 +27,11 @@
             from {transform: rotate(0deg);}
             from {transform: rotate(360deg);}
         }
+
+        @keyframes mov-rot {
+            from {transform: translate(50px,0px) rotate(0deg) scale(0);}
+            to {transform: translate(50px,500px) rotate(360deg) scale(3);}
+        }
     </style>
 </head>
 
@@ -38,11 +43,25 @@
         animation-iteration-count: 3;
         animation-direction: alternate;
         animation-fill-mode: backwards;
-        "></div>
+    "></div>
 
     <div class="box" style=" position: relative; left:0px; top: 0px; background-color: red;"></div>
 
-    <div>
+    <div class="box" style="
+        transform: translate(200px,200px);
+        animation: rotation; 
+        animation-duration: 3s; 
+        animation-timing-function: linear;
+    "></div>
+
+    <div class="box" style="
+        background-color: green;
+        animation-name: mov-rot;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    ">
 
     </div>
 </body>
