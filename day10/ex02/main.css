@@ -6,19 +6,21 @@
     font-display: swap;
 }
 
-body {
+body{
     display: flex;
+       margin: 10px;
+    padding: 244px;
     background-color: blue;
     color: white;
-    padding: 0px;
-    margin: 0px;
-    position: fixed;
     font-family: 'RoundedFixedsys';
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.box-1 {
-    font-size: 64px;
-    margin-bottom: 20px;
-    display: flex;
+
+
+.box-1{
+
+font-size: 64px;
 }
