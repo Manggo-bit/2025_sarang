@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+    <style>
+        @import url(./main.css);
+    </style>
+ <!-- 앞에 점(.)은 같은 파일이라는 뜻!--> <!--그리고 처음 배울 때에는 여기에 있는 기본틀 외우고 시작해도 된다!-->
+</head>
+<body>
+
+    <div class="retro-font-1">MSX</div>
+    <div class="cat-font-1">★ ¢ I love cat ♧ ★</div>
+    
+    <div class="box-1" style="background-color: red;"> 
+        Box1 </div> <!--태그하고 가까운 게 우선순위가 높음-->
+    <div class="box-1" 
+    style="margin-top: 8px; 
+    justify-content: center;">
+         Box2 </div>
+
+    <div class="box-1" 
+    style="margin-top: 8px; 
+    margin-left: 4px; 
+    justify-content: flex-end;">
+         Box3 </div>
+
+    <script type="module">
+        import main from './index.js'
+        main();
+    </script>
+
+</body>
+</html>
