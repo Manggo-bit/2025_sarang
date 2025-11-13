@@ -9,7 +9,7 @@
 body{
     display: flex;
     margin: 10px;
-    padding: 244px;
+    padding: 0px;
     background-color: blue;
     color: white;
     font-family: 'RoundedFixedsys';
@@ -37,6 +37,7 @@ font-size: 64px;
 }
 
 .copyright-info{
-    top: 16px;
+    position: absolute;
+    bottom: 0px;
     left: 4px;
 }
