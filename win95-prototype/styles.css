@@ -1,0 +1,113 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #008080;
+  font-family: "MS Sans Serif", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 부팅 화면 */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: #000 url('./assets/win95_splash.png') no-repeat center center;
+  background-size: contain;
+  z-index: 10;
+}
+
+
+/* 메인창 */
+.window {
+  width: 600px;
+  height: 400px;
+  background: #017060;
+  color: white;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 작업 표시줄: 화면 하단에 고정 */
+.taskbar {
+  position:fixed; left:0; right:0; bottom:0; height:42px; z-index:9;
+  background:#c0c0c0; border-top:2px solid #fff; box-shadow:inset 0 2px 0 #808080;
+  display:flex; align-items:center; justify-content:space-between; padding:3px 8px;
+}
+.taskbar img { image-rendering: pixelated; }
+
+/* Start 버튼 이미지 크기 통일 */
+.start-img { height:36px; width:auto; cursor:pointer; display:block; }
+
+/* 시계 박스 + 텍스트 겹치기 */
+.clock-container { position:relative; height:36px; width:110px; }
+.clock-box { height:100%; width:auto; display:block; }
+.clock-text {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  color:#000; font-size:14px; font-weight:700; letter-spacing:0.5px;
+}
+
+/* --- 웰컴창 이미지 모달 --- */
+.welcome-wrap {
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+/* 이미지 + 버튼이 들어 있는 박스 */
+.welcome-box {
+  position: relative;          /* ✅ 반드시 있어야 함 */
+  display: inline-block;
+  width: fit-content;          /* ✅ 크기를 이미지에 맞게 */
+  height: fit-content;
+}
+
+/* 이미지 */
+.welcome-img {
+  width: 680px;
+  height: auto;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* 버튼 (이미지 기준 좌표로 고정) */
+.x-btn, .ok-btn {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.05s;
+  z-index: 2;
+}
+
+/* X 버튼 위치 — 오른쪽 상단 */
+.x-btn {
+    top: 132px;
+    right: 134px;
+    width: 24px;
+    height: 22px;
+}
+
+/* OK 버튼 위치 — 중앙 하단 */
+.ok-btn {
+    bottom: 151px;
+    left: 54%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 32px;
+}
+
+/* 눌림 효과 */
+.x-btn:active { transform: scale(0.95); }
+.ok-btn:active { transform: translateX(-50%) scale(0.95); }
+
+/* ③ 임시: 클릭 영역 보이게 (확인 끝나면 지워도 됨) */
+/* .x-btn { background: rgba(255,0,0,.2); }
+/* .ok-btn { background: rgba(0,255,0,.2); }
