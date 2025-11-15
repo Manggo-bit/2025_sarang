@@ -32,3 +32,23 @@ xBtn.addEventListener('click', () => {
 okBtn.addEventListener('click', () => {
   welcomeWrap.classList.add('hidden');
 });
+
+// 시계 요소
+const clockText = document.getElementById('clockText');
+
+// ======================
+// ⏰ 작업표시줄 시계 기능
+// ======================
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  
+  // "HH:MM" 형식으로 표시
+  clockText.textContent = `${hours}:${minutes}`;
+}
+
+// 1초마다 시간 갱신
+setInterval(updateClock, 1000);
+// 새로고침하자마자 한 번 실행
+updateClock();
