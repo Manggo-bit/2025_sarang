@@ -52,9 +52,9 @@ body {
 .taskbar {
   position:fixed; left:0; right:0; bottom:0; height:56px; z-index:9;
   background:#c0c0c0; border-top:2px solid #fff; box-shadow:inset 0 2px 0 #808080;
-  display:flex; align-items:center; justify-content:space-between; padding:6px 12px;
+  display:flex; align-items:center; justify-content:space-between; padding:2px 12px;
 }
-.taskbar img { height:120px; width:auto; cursor:pointer; display:block; margin-top:6px;}
+.taskbar img { height:100px; width:auto; cursor:pointer; display:block; margin-top:6px; margin-left: -40px;}
 
 /* Start 버튼 이미지 크기 통일 */
 .start-img { height:140px; width:auto; cursor:pointer; display:block; margin-top:6px; margin-left: -40px; }
@@ -63,9 +63,9 @@ body {
 .clock-container {
   position: relative;
 
-  width: 90px;        /* 원하는 크기로 조절 */
-  height: 40px;
-  margin-right: 8px;
+  width: 80px;        /* 원하는 크기로 조절 */
+  height: 30px;
+  margin-right: 6px;
 
   background: #c3c3c3;
   /* 위·왼쪽은 밝게, 아래·오른쪽은 어둡게 → 눌린 3D 느낌 */
@@ -93,8 +93,8 @@ body {
 /* 폴더 아이콘 위치 (검은 네모 있던 자리쯤) */
 .folder-icon {
   position: absolute;
-  top: 0px;   /* 위에서부터 거리 – 숫자 바꾸면 위치 조절 가능 */
-  left: -120px;  /* 왼쪽에서부터 거리 */
+  top: -50px;   /* 위에서부터 거리 – 숫자 바꾸면 위치 조절 가능 */
+  left: -130px;  /* 왼쪽에서부터 거리 */
 
   text-align: center;
   cursor: pointer;
@@ -102,17 +102,40 @@ body {
 
 /* 폴더 이미지 */
 .folder-icon img {
-  width: 330px;          /* 폴더 크기, 원하시면 48px 등으로 변경 */
+  width: 400px;          /* 폴더 크기, 원하시면 48px 등으로 변경 */
   display: block;
   image-rendering: pixelated;  /* 픽셀 느낌 살리기 (지원 안 돼도 문제 없음) */
 }
 
 /* 폴더 이름 글씨 */
 .folder-name {
-  margin-top: -80px;
-  font-size: 11px;
+  margin-top: -95px;
+  font-size: 16px;
+  font-family: 'W95FA';
   color: #ffffff;
   text-shadow: 1px 1px 0 #000000;  /* 윈도우95 느낌 나는 글자 그림자 */
+}
+
+/* 지렁이 아이콘 */
+.worm-icon {
+  position: absolute;
+  top: 160px;   /* 폴더 아이콘과 높이를 맞춤 */
+  left: 36px;  /* 폴더 아이콘 오른쪽으로 일정 거리를 두고 배치 */
+  text-align: center;
+  cursor: pointer;
+}
+
+.worm-icon img {
+  width: 70px;   /* 아이콘 크기 설정 */
+  display: block;
+}
+
+.worm-name {
+  margin-top: -8px;
+  font-size: 15px;
+  font-family: 'W95FA';
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;
 }
 
 /* --- 웰컴창 이미지 모달 --- */
@@ -169,61 +192,6 @@ body {
 .x-btn:active { transform: scale(0.95); }
 .ok-btn:active { transform: translateX(-50%) scale(0.95); }
 
-/* PNG 창 전체 wrap */
-.png-window {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 90;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
-
-/* PNG + 버튼 포함 박스 */
-.png-box {
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-}
-
-/* PNG 창 이미지 */
-.png-window-img {
-  width: 350px; /* 필요시 조절 */
-  image-rendering: pixelated;
-  pointer-events: none; /* 이미지는 클릭해도 방해되지 않도록 */
-}
-
-/* 게임 창 전체 wrap */
-.game-window-wrap {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 80;   /* 게임 창의 Z-index 조정 (다른 요소 위에 놓기) */
-}
-
-/* 게임 창 아이콘 */
-.worm-icon {
-  position: absolute;
-  top: 20px;  /* 창 상단에서 20px 위치 */
-  left: 50%;  /* 창 가로 중앙 */
-  transform: translateX(-50%); /* 가로 중앙 정렬 */
-  width: 48px;  /* 아이콘 크기 */
-  height: 48px;
-  image-rendering: pixelated;  /* 픽셀 느낌 살리기 */
-  z-index: 100; /* 아이콘이 다른 요소에 가려지지 않도록 */
-}
-
-/* 폴더 아이콘 위치 (50px 이상 떨어지도록 수정) */
-.folder-icon {
-  position: absolute;
-  top: 50px;   /* 위에서부터 50px 아래로 떨어짐 */
-  left: 50px;  /* 왼쪽에서 50px 떨어짐 */
-  text-align: center;
-  cursor: pointer;
-}
-
-
-
-
+/* ③ 임시: 클릭 영역 보이게 (확인 끝나면 지워도 됨) */
+/* .x-btn { background: rgba(255,0,0,.2); }
+/* .ok-btn { background: rgba(0,255,0,.2); }

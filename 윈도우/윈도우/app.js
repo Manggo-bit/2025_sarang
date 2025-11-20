@@ -53,17 +53,6 @@ setInterval(updateClock, 1000);
 // 새로고침하자마자 한 번 실행
 updateClock();
 
-// PNG 창 요소
-const gameWindowWrap = document.getElementById('gameWindowWrap');  // 수정된 부분
-const gameXBtn = document.querySelector('.game-x-btn');  // X 버튼
-const folderIcon = document.querySelector('.folder-icon');  // 폴더 아이콘
-
-// 폴더 클릭 → 게임 창 열기
-folderIcon.addEventListener('click', () => {
-  gameWindowWrap.classList.remove('hidden');  // 게임 창 열기 (gameWindowWrap 사용)
-});
-
-// 게임 창 X 버튼 클릭 → 닫기
-gameXBtn.addEventListener('click', () => {
-  gameWindowWrap.classList.add('hidden');  // 게임 창 닫기
-});
+// 폴더 아이콘 클릭 시 이벤트 처리
+const folderIcon = document.getElementById('folderIcon');
+const folderScreen = document.getElementById('folderScreen');
