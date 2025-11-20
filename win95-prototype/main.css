@@ -90,6 +90,30 @@ body {
   color: #000000;
 }
 
+/* 폴더 아이콘 위치 (검은 네모 있던 자리쯤) */
+.folder-icon {
+  position: absolute;
+  top: 40px;   /* 위에서부터 거리 – 숫자 바꾸면 위치 조절 가능 */
+  left: 80px;  /* 왼쪽에서부터 거리 */
+
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 폴더 이미지 */
+.folder-icon img {
+  width: 64px;          /* 폴더 크기, 원하시면 48px 등으로 변경 */
+  display: block;
+  image-rendering: pixelated;  /* 픽셀 느낌 살리기 (지원 안 돼도 문제 없음) */
+}
+
+/* 폴더 이름 글씨 */
+.folder-name {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;  /* 윈도우95 느낌 나는 글자 그림자 */
+}
 
 /* --- 웰컴창 이미지 모달 --- */
 .welcome-wrap {
