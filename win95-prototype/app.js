@@ -54,16 +54,17 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // PNG 창 요소
-const gameWindowWrap = document.getElementById('gameWindowWrap');  // 수정된 부분
-const gameXBtn = document.querySelector('.game-x-btn');  // X 버튼
-const folderIcon = document.querySelector('.folder-icon');  // 폴더 아이콘
+const gameWindowWrap = document.getElementById('gameWindowWrap');   // 게임 창 전체
+const gameXBtn = document.querySelector('.game-close-btn');         // ✅ X 버튼 영역
+const folderIcon = document.querySelector('.folder-icon');          // 폴더 아이콘
 
 // 폴더 클릭 → 게임 창 열기
 folderIcon.addEventListener('click', () => {
-  gameWindowWrap.classList.remove('hidden');  // 게임 창 열기 (gameWindowWrap 사용)
+  gameWindowWrap.classList.remove('hidden');
 });
 
-// 게임 창 X 버튼 클릭 → 닫기
+// X 버튼 클릭 → 게임 창 닫기
 gameXBtn.addEventListener('click', () => {
-  gameWindowWrap.classList.add('hidden');  // 게임 창 닫기
+  gameWindowWrap.classList.add('hidden');
 });
+

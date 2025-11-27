@@ -90,52 +90,21 @@ body {
   color: #000000;
 }
 
-/* 폴더 아이콘 위치 (검은 네모 있던 자리쯤) */
-.folder-icon {
-  position: absolute;
-  top: -50px;   /* 위에서부터 거리 – 숫자 바꾸면 위치 조절 가능 */
-  left: -130px;  /* 왼쪽에서부터 거리 */
-
-  text-align: center;
-  cursor: pointer;
-}
 
 /* 폴더 이미지 */
 .folder-icon img {
-  width: 400px;          /* 폴더 크기, 원하시면 48px 등으로 변경 */
+  width: 380px;          /* 폴더 크기, 원하시면 48px 등으로 변경 */
   display: block;
   image-rendering: pixelated;  /* 픽셀 느낌 살리기 (지원 안 돼도 문제 없음) */
 }
 
 /* 폴더 이름 글씨 */
 .folder-name {
-  margin-top: -95px;
-  font-size: 16px;
+  margin-top: -90px;
+  font-size: 14px;
   font-family: 'W95FA';
   color: #ffffff;
   text-shadow: 1px 1px 0 #000000;  /* 윈도우95 느낌 나는 글자 그림자 */
-}
-
-/* 지렁이 아이콘 */
-.worm-icon {
-  position: absolute;
-  top: 160px;   /* 폴더 아이콘과 높이를 맞춤 */
-  left: 36px;  /* 폴더 아이콘 오른쪽으로 일정 거리를 두고 배치 */
-  text-align: center;
-  cursor: pointer;
-}
-
-.worm-icon img {
-  width: 70px;   /* 아이콘 크기 설정 */
-  display: block;
-}
-
-.worm-name {
-  margin-top: -8px;
-  font-size: 15px;
-  font-family: 'W95FA';
-  color: #ffffff;
-  text-shadow: 1px 1px 0 #000000;
 }
 
 /* --- 웰컴창 이미지 모달 --- */
@@ -192,6 +161,94 @@ body {
 .x-btn:active { transform: scale(0.95); }
 .ok-btn:active { transform: translateX(-50%) scale(0.95); }
 
-/* ③ 임시: 클릭 영역 보이게 (확인 끝나면 지워도 됨) */
-/* .x-btn { background: rgba(255,0,0,.2); }
-/* .ok-btn { background: rgba(0,255,0,.2); }
+/* 지렁이 아이콘 */
+.worm-icon {
+  position: absolute;
+  top: 160px;   /* 폴더 아이콘과 높이를 맞춤 */
+  left: 36px;  /* 폴더 아이콘 오른쪽으로 일정 거리를 두고 배치 */
+  text-align: center;
+  cursor: pointer;
+}
+
+.worm-icon img {
+  width: 70px;   /* 아이콘 크기 설정 */
+  display: block;
+}
+
+.worm-name {
+  margin-top: -8px;
+  font-size: 15px;
+  font-family: 'W95FA';
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+/* PNG 창 전체 wrap */
+.png-window {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 90;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* PNG + 버튼 포함 박스 */
+.png-box {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* PNG 창 이미지 */
+.png-window-img {
+  width: 350px; /* 필요시 조절 */
+  image-rendering: pixelated;
+  pointer-events: none; /* 이미지는 클릭해도 방해되지 않도록 */
+}
+
+/* 게임 창 전체 wrap (위치/크기) */
+.game-window-wrap {
+  position: fixed;
+  top: -25px;      /* 폴더 창이 뜨는 Y 위치 */
+  left: 150px;    /* 폴더 창이 뜨는 X 위치 */
+  z-index: 80;    /* 작업표시줄보다 위에 */
+}
+
+/* 이미지 + X버튼을 묶는 박스 */
+.game-window-box {
+  position: relative;
+  display: inline-block;
+}
+
+/* 폴더 창 이미지 */
+.game-window-img {
+  display: block;
+  width: 450px;      /* 폴더 창 PNG 폭 */
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* 폴더 창의 X 버튼 클릭 영역 */
+.game-close-btn {
+  position: absolute;
+  top: 100px;      /* X 아이콘 위치에 맞춰 */
+  right: 103px;
+  width: 17px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 2;
+  /*
+  background: rgba(255, 0, 0, 0.3);*/
+}
+
+
+/* 폴더 아이콘 위치 (50px 이상 떨어지도록 수정) */
+.folder-icon {
+  position: absolute;
+  top: -20px;   /* 위에서부터 50px 아래로 떨어짐 */
+  left: -117px;  /* 왼쪽에서 50px 떨어짐 */
+  text-align: center;
+  cursor: pointer;
+}

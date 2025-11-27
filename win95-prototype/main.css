@@ -194,32 +194,48 @@ body {
   pointer-events: none; /* 이미지는 클릭해도 방해되지 않도록 */
 }
 
-/* 게임 창 전체 wrap */
+/* 게임 창 전체 wrap (위치/크기) */
 .game-window-wrap {
   position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 80;   /* 게임 창의 Z-index 조정 (다른 요소 위에 놓기) */
+  top: 30px;      /* 창의 Y 위치 – 숫자 바꿔서 취향대로 조절 */
+  left: 350px;    /* 창의 X 위치 */
+  z-index: 80;    /* 작업표시줄보다 위에 */
 }
 
-/* 게임 창 아이콘 */
-.worm-icon {
-  position: absolute;
-  top: 20px;  /* 창 상단에서 20px 위치 */
-  left: 50%;  /* 창 가로 중앙 */
-  transform: translateX(-50%); /* 가로 중앙 정렬 */
-  width: 48px;  /* 아이콘 크기 */
-  height: 48px;
-  image-rendering: pixelated;  /* 픽셀 느낌 살리기 */
-  z-index: 100; /* 아이콘이 다른 요소에 가려지지 않도록 */
+/* 이미지 + X버튼을 묶는 박스 */
+.game-window-box {
+  position: relative;
+  display: inline-block;
 }
+
+/* 폴더 창 이미지 */
+.game-window-img {
+  display: block;
+  width: 300px;      /* PNG 실제 크기에 맞게 조절해도 됨 */
+  height: auto;
+  image-rendering: pixelated;
+}
+
+/* 폴더 창의 X 버튼 클릭 영역 */
+.game-close-btn {
+  position: absolute;
+  top: 5px;      /* X 아이콘 있는 곳에 맞게 */
+  right: 8px;
+  width:  21px;   /* 클릭 가능한 범위 */
+  height: 21px;
+  cursor: pointer;
+  z-index: 2;
+
+  /* 위치 잡을 때만 잠깐 켜 두세요 */
+  background: rgba(255, 0, 0, 0.3);
+}
+
 
 /* 폴더 아이콘 위치 (50px 이상 떨어지도록 수정) */
 .folder-icon {
   position: absolute;
-  top: 50px;   /* 위에서부터 50px 아래로 떨어짐 */
-  left: 50px;  /* 왼쪽에서 50px 떨어짐 */
+  top: 50px;
+  left: 50px;
   text-align: center;
   cursor: pointer;
 }

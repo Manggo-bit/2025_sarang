@@ -53,6 +53,21 @@ setInterval(updateClock, 1000);
 // 새로고침하자마자 한 번 실행
 updateClock();
 
-// 폴더 아이콘 클릭 시 이벤트 처리
-const folderIcon = document.getElementById('folderIcon');
-const folderScreen = document.getElementById('folderScreen');
+// ======================
+// 📁 폴더 창 열기 / 닫기 (1번 프로젝트와 동일하게)
+// ======================
+
+// 폴더 창 요소
+const gameWindowWrap = document.getElementById('gameWindowWrap');   // 폴더 창 전체
+const gameXBtn = document.querySelector('.game-close-btn');         // X 버튼 영역
+const folderIcon = document.querySelector('.folder-icon');          // 바탕화면 폴더 아이콘
+
+// 폴더 아이콘 클릭 → 폴더 창 열기
+folderIcon.addEventListener('click', () => {
+  gameWindowWrap.classList.remove('hidden');
+});
+
+// 폴더 창 X 버튼 클릭 → 폴더 창 닫기
+gameXBtn.addEventListener('click', () => {
+  gameWindowWrap.classList.add('hidden');
+});
