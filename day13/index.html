@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D</title>
+    <style>
+        @import url('./main.css');
+    </style>
+</head>
+<body>
+    <header></header>
+    <main id="main-menu">
+        <div class="title" >Dungeon & Dragons</div>
+
+        <div class="menu-item" data-action="start" >New</div>
+        <div class="menu-item" data-action="load" >Load</div>
+        <div class="menu-item" data-action="option" >Option</div>
+
+    </main>
+
+    <main id="game-screen" class="hide">
+        <div id="player"></div>
+    </main>
+
+    <main id="option-screen" class="hide">
+        <div class="option-title">Options</div>        
+        <div class="option-item">Sound: On/Off</div>
+        <div class="option-item">Graphics: High/Medium/Low</div>
+        <div class="option-item">Controls: Default/Custom</div>
+        <div class="back-button" data-action="back">Back to Main Menu</div>
+    </main>
+
+    <main id="credit-screen" class="hide">
+        <div class="credit-title">Credits</div>        
+        <div class="credit-item">Game Design: 도플광어</div>
+        <div class="credit-item">Programming: 도플광어</div>
+        <div class="credit-item">Art: 도플광어</div>
+        <div class="back-button" data-action="back">Back to Main Menu</div>
+    </main>
+
+
+    <footer></footer>
+    <script type="module">
+        import main from './index.js'
+        main();
+    </script>    
+</body>
+</html>
