@@ -199,18 +199,19 @@ body {
 
 .worm-game-window-wrap {
   position: fixed;
-  top: 10px;
-  left: 150px;
-  width: 412px; /* 400px content + 4px border + 8px padding */
-  z-index: 80;
-  background: #c0c0c0;
-  border-top: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
-  border-right: 2px solid #000000;
-  border-bottom: 2px solid #000000;
-  padding: 4px;
-  display: none;
-}
+    top: 25px;
+    left: 350px;
+    width: 412px;
+    /* 400px content + 4px border + 8px padding */
+    z-index: 80;
+    background: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    padding: 4px;
+    display: none;
+  }
 
 .worm-game-window-wrap.visible {
   display: block;
