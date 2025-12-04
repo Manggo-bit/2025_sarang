@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: blue;    
+    height: 100vh;      /* 화면 높이 채우기 */
+    flex-direction: column;
+    font-family: 'RoundedFixedsys';
+
+}
+@font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    color: white;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

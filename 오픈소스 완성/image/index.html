@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Windows 95 Boot</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+  <!-- 부팅 화면 -->
+  <section id="splash" class="splash">
+    <audio id="startupAudio" src="./assets/windows_95_boot.mp3" preload="auto"></audio>
+  </section>
+
+  <!-- 데스크탑 -->
+  <main id="desktop" class="desktop hidden">
+    <!-- 기본 폴더 아이콘 -->
+    <div class="folder-icon" id="folderIcon">
+      <img src="./assets/Floder.png" alt="폴더 아이콘">
+      <div class="folder-name">Folder</div>
+    </div>
+
+    <!-- 지렁이 아이콘 -->
+    <div class="worm-icon" id="wormIcon">
+      <img src="./assets/Swarm Icon.png" alt="지렁이 아이콘">
+      <div class="worm-name">Swarm</div>
+    </div>
+
+    <!-- 폴더 창-->
+    <div id="folderWindowWrap" class="folder-window-wrap hidden">
+      <div class="folder-window-box">
+        <img src="./assets/FolderScreen.png" class="game-window-img" alt="폴더 창" />
+        <div class="folder-close-btn"></div>
+      </div>
+    </div>
+
+    <!-- 지렁이 게임 창 -->
+    <div id="wormGameWindowWrap" class="worm-game-window-wrap hidden">
+      <div class="window-title-bar">
+        <span class="title-text">Swarm</span>
+        <div class="worm-game-close-btn"></div>
+      </div>
+      <div class="window-content">
+        <div id="gameStartText">Click to Start</div>
+        <canvas id="gameCanvas" width="400" height="300"></canvas>
+      </div>
+    </div>
+
+    <!-- 작업 표시줄 -->
+    <div class="taskbar">
+      <img src="./assets/Star Btn.png" id="startBtn" class="start-img" alt="Start 버튼" />
+      <div class="clock-container">
+        <span id="clockText" class="clock-text">--:--</span>
+      </div>
+    </div>
+
+    <!-- 웰컴 이미지 창 -->
+    <div id="welcomeWrap" class="welcome-wrap hidden">
+      <div class="welcome-box">
+        <img src="./assets/WelcomeScreen.png" class="welcome-img" alt="Welcome 창" />
+        <div class="x-btn"></div>
+        <div class="ok-btn"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
