@@ -17,6 +17,7 @@ splash.addEventListener('click', async () => {
   }
 });
 
+
 // 🎵 사운드 끝 → 데스크탑 보이기 + 웰컴창 표시
 audio.addEventListener('ended', () => {
   splash.classList.add('hidden');
