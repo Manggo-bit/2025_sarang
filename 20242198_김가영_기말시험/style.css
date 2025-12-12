@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 2em;
+    align-items: center;
+
+    background-color: #1010ff;
+    color: white;
+    font-family: 'RoundedFixedsys', monospace;
+}
+
+.center-text {
+    text-align: center;
+}
